@@ -15,10 +15,10 @@ Let's consider the task from the first week when we converted temperatures from 
 when dealing with temperatures. Thus we might need to repeat such calculations quite frequently when analysing or comparing e.g. weather or 
 climate changes between US and Europe.
    
-Let's define our first function called ´fahr_to_celsius´:
+Let's define our first function called `celsius_to_fahr`:
 
   ```python
-  def fahr_to_celsius(temp):
+  def celsius_to_fahr(temp):
     return 9/5 * temp + 32
   ```
   
@@ -31,6 +31,15 @@ When we call the function, the values we pass to it are assigned to those variab
 Inside the function, we use a return statement to send a result back to whoever asked for it.
 
 Let’s try running our function. Calling our own function is no different from calling any other function:  
+  
+   ```python
+   >>> print('Freezing point of water in Fahrenheits:', celsius_to_fahr(0))
+   Freezing point of water in Fahrenheits: 32.0
+   >>> print('Boiling point of water in Fahrenheits:', celsius_to_fahr(100))
+   Boiling point of water in Fahrenheits: 212.0
+   ```
+
+
 
 **TODO**
 
