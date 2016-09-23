@@ -1,6 +1,16 @@
 # Functions
 
-## What is a function?
+**Contents**:
+
+ 1. [What is a function?](#1)
+ 2. [Anatomy of a function](#2)
+ 3. [Calling functions](#3)
+ 4. [Importing functions from a script](#4)
+   4.1 Saving functions into a Python script
+   4.2 Calling functions from a script
+   4.3 Temperature calculator
+
+##<a name="1">1. What is a function?
 
 Function is a block of organized, reusable code that can make your code more effective, clearer to read and easier to handle. 
 You can think functions as little self-contained programs that can perform a specific task which you can use repeatedly in your code. 
@@ -9,7 +19,7 @@ duplicate lines of code in your script. Functions are a way to avoid such situat
 retell the computer what to do every time it does a common task, such as converting temperatures from Fahrenheits to Celsius. 
 During the course we have already used some functions such as `print()` command which is actually a built-in function in Python.
 
-## Anatomy of a function
+##<a name="2"> 2. Anatomy of a function
 
 Let's consider the task from the first week when we converted temperatures from Fahrenheits to Celsius. Such an operation is a fairly common task 
 when dealing with temperatures. Thus we might need to repeat such calculations quite frequently when analysing or comparing e.g. weather or 
@@ -30,9 +40,9 @@ The body of the function — the statements that are executed when it runs — i
 When we call the function, the values we pass to it are assigned to those variables so that we can use them inside the function. 
 Inside the function, we use a return statement to send a result back to whoever asked for it.
 
-## Using functions
+##<a name="3"> 3. Calling functions
 
-Let’s try running our function. Calling our own function is no different from calling any other function such as `print()`. 
+Let’s try running our function. Calling our self-defined function is no different from calling any other function such as `print()`. 
 You need to call it with its name and send your value to the required parameter(s) inside the parentheses:  
   
 ```python
@@ -79,30 +89,30 @@ Let's use the function:
 Absolute zero in Fahrenheit: -459.66999999999996
 ```
 
-
-## Importing functions from a script
+##<a name="4">4. Importing functions from a script
 
 Functions such as the ones we just created can also be called from another script.
 
-### 1. Saving functions into a script file
+### 4.1. Saving functions into a script file
  
-Before we can import our functions we need to create a new script file and save the functions that we just created into a Python file called <span style="color:red">temp_converter.py</span> \[[0](#Footnotes)\].   
+Before we can import our functions we need to create a new script file and save the functions that we just created into a Python file called _temp_converter.py_ \[[0](#Footnotes)\].   
 
-We can take advantage of the **_History log_** -tab where we should be able to find all of the commands that we wrote to IPython console \[[1](#Footnotes)\]:
+We could write the functions again into the script file but we can also take advantage of the **_History log_** -tab where we should find all commands that we wrote 
+to IPython console \[[1](#Footnotes)\]:
  
 <img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/history_log.PNG" width="300">
 
-Copy and paste the functions from the History log -tab and save them into the <span style="color:red">temp_converter.py</span> -script. 
+Copy and paste the functions from the History log -tab and save them into the _temp_converter.py_ -script. 
 It should look like following:
 
 <img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/temp_converter.PNG" width="400">
  
-### 2. Calling functions from another script file
+### 4.2. Calling functions from another script file
 
-Now as we have saved our temperature conversion functions into a script file we can start using them. Let's create another script file called ```diff - temp_calculator.py ```. 
-**IMPORTANT**: Save the file into the SAME FOLDER where you saved the <span style="color:red">temp_converter.py</span> -file \[[2](#Footnotes)\].  
+Now as we have saved our temperature conversion functions into a script file we can start using them. Let's create another script file called _temp_calculator.py_. 
+**IMPORTANT**: Save the file into the SAME FOLDER where you saved the _temp_converter.py_ -file \[[2](#Footnotes)\].  
 
-Let's now import our `celsius_to_fahr` -function from the other script by adding a specific `import` statement at the top of our <span style="color:red">temp_calculator.py</span> -script \[[3](#Footnotes)\].
+Let's now import our `celsius_to_fahr` -function from the other script by adding a specific `import` statement at the top of our _temp_calculator.py_ -script \[[3](#Footnotes)\].
 Let's also use the function so that we can see that it is working:
 
 ```python
@@ -119,12 +129,12 @@ Run the code by pressing F5 button or by pressing the <img style="float: right;"
 
 It is also possible to import more functions at the same time by listing and separating them with colon: 
 
-```from script import func1, func2, func3```
+```from my_script import func1, func2, func3```
  
-However, quite often it is useful to import all functions at once from the script by using \* symbol \[[4]\]. Let's modify the import statement in our script and test that all functions work:
+However, quite often it is useful to import the whole script and all of its' functions at once \[[4]\]. Let's modify the import statement in our script and test that all functions work:
 
 ```python
-from temp_converter import *
+import temp_converter 
 
 # Testing that all functions from another file works
 print("Water freezing point in Fahrenheit:", celsius_to_fahr(0))
@@ -132,15 +142,103 @@ print('Absolute zero in Celsius:', kelvin_to_celsius(temp_k=0))
 print('Absolute zero in Fahrenheit:', kelvin_to_fahrenheit(temp_k=0))
 ```
 
+### 4.3. Temperature calculator
+
+So far our functions has had only one parameter but it is also possible to define a function with multiple parameters. 
+Let's now make a simple `temp_calculator` -function that converts and returns Kelvin temperature to either Celsius or Fahrenheit. Function will have two parameters:
+ 
+ 1. **temp** = parameter for passing temperature in Kelvin
+ 2. **convert\_to** = parameter that determines whether to output should be in Celsius or in Fahrenheit (using letters "C" or "F" accordingly)
+ 
+Let's start defining our function by giving it a name and setting the parameters:
+
+```python
+def temp_calculator(temp, convert_to):
+```
+
+Next we need to add a conditional statement that checks whether the result temperature is wanted in Celsius and then call corresponding function that was imported from temp_converter.py file. 
+
+```python
+def temp_calculator(temp, convert_to):
+    # Check if user wants the temperature as Celsius
+    if convert_to == "C":
+        # Convert the value to Celsius using the function that we imported from another script
+        converted_temp = kelvin_to_celsius(temp_k=temp)
+```
+
+Now our function checks if the input temperature is wanted as Celsius and converts the value accordingly. Let's continue and add the second condition for Fahrenheit:
+  
+```python
+def temp_calculator(temp, convert_to):
+    # Check if user wants the temperature as Celsius
+    if convert_to == "C":
+        # Convert the value to Celsius using dedicated function for the task that we imported from another script
+        converted_temp = kelvin_to_celsius(temp_k=temp)
+    elif convert_to == "F":
+        # Convert the value to Fahrenheit using dedicated function for the task that we imported from another script
+        converted_temp = kelvin_to_fahrenheit(temp_k=temp)
+```
+
+Next, we need to add a **return statement** so that our function sends back the value that we are interested in:
+ 
+```python
+def temp_calculator(temp, convert_to):
+    # Check if user wants the temperature as Celsius
+    if convert_to == "C":
+        # Convert the value to Celsius using dedicated function for the task that we imported from another script
+        converted_temp = kelvin_to_celsius(temp_k=temp)
+    elif convert_to == "F":
+        # Convert the value to Fahrenheit using dedicated function for the task that we imported from another script
+        converted_temp = kelvin_to_fahrenheit(temp_k=temp)
+    # Return the result
+    return converted_temp
+```
+
+Lastly, as we want to be good programmers, we add a short message at the beginning of our function that tells what the function does and how the parameters work:
+
+ ```python
+def temp_calculator(temp, convert_to):
+    """Function for converting Kelvin temperature to Celsius or Fahrenheit.
+    Parameters:
+    temp: Temperature in Kelvin
+    convert_to: "C" or "F" that corresponds to Celsius or Fahrenheit accordingly"""
+    
+    # Check if user wants the temperature as Celsius
+    if convert_to == "C":
+        # Convert the value to Celsius using dedicated function for the task that we imported from another script
+        converted_temp = kelvin_to_celsius(temp_k=temp)
+    elif convert_to == "F":
+        # Convert the value to Fahrenheit using dedicated function for the task that we imported from another script
+        converted_temp = kelvin_to_fahrenheit(temp_k=temp)
+    # Return the result
+    return converted_temp
+```
+
+That's it! Now we have a simple temperature calculator that has a simple control for the user where s/he can change the output by using the `convert_to` -parameter. Now as we added the short 
+description in the beginning of the function we can use the `help()` function in Python to find out how our function should be used. Run the script and try following:
+  
+ ```python
+ >>> help(temp_calculator)
+ ```
+  
+Let's use it:
+
+ ```python
+ >>> temp_in_kelvin = 30
+ >>> temperature_c = temp_calculator(temp=temp_in_kelvin, convert_to="C")
+ >>> print("Temperature", temp_in_kelvin, "in Kelvin is", temperature_c, "in Celsius")
+ Temperature 30 in Kelvin is XX in Celsius.
+ ```
 
 
-## Footnotes
+## 5. Footnotes
 
 - \[0\] See [earlier materials concerning Spyder](spyder.md) if you don't remember how to save a new script file from Spyder.
 - \[1\] History log -tab can be found from the same panel where we have executed our codes (bottom right next to IPython console).
 - \[2\] When communicating between script files, it is necessary to keep them in the same folder so that Python can find them (there are also other ways but this is the easiest).
 - \[3\] Following the principles of good programming all `import` -statements that you use should always be written at the top of the script file.  
-- \[4\] Downside of using \* -symbol when importing the functions from another script is that you won't see what functions are imported, unless checking them from the script itself.  
+- \[4\] Downside of importing the whole script with its' functions is that you won't see what functions are imported, unless checking them from the script itself. 
+It is also possible to import all functions by using  \* symbol in the import statement such as `from script import *`.   
 
 **TODO**
 
