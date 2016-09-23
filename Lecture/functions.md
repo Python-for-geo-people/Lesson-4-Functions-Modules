@@ -69,7 +69,7 @@ Absolute zero in Celsius: -273.15
 ```
 
 What about converting Kelvin to Fahrenheits? We could write out an own formula for it, but we don’t need to. Instead, we can compose it by using the two functions we have already created and 
-calling the other functions inside the function we are now creating: 
+calling those from the function we are now creating: 
     
 ```python
 >>> def kelvin_to_fahrenheit(temp_k):
@@ -131,10 +131,10 @@ It is also possible to import more functions at the same time by listing and sep
 
 ```from my_script import func1, func2, func3```
  
-However, quite often it is useful to import the whole script and all of its' functions at once \[[4]\]. Let's modify the import statement in our script and test that all functions work:
+However, quite often it is useful to import all of its' functions at once \[[4]\] that can be used by using specific \* -character. Let's modify the import statement in our script and test that all functions work:
 
 ```python
-import temp_converter 
+from temp_converter import *  
 
 # Testing that all functions from another file works
 print("Water freezing point in Fahrenheit:", celsius_to_fahr(0))
@@ -237,8 +237,8 @@ Let's use it:
 - \[1\] History log -tab can be found from the same panel where we have executed our codes (bottom right next to IPython console).
 - \[2\] When communicating between script files, it is necessary to keep them in the same folder so that Python can find them (there are also other ways but this is the easiest).
 - \[3\] Following the principles of good programming all `import` -statements that you use should always be written at the top of the script file.  
-- \[4\] Downside of importing the whole script with its' functions is that you won't see what functions are imported, unless checking them from the script itself. 
-It is also possible to import all functions by using  \* symbol in the import statement such as `from script import *`.   
+- \[4\] Downside of importing using \* symbol for importing all functions is that you won't see what functions are imported, unless checking them from the script itself. 
+   
 
 **TODO**
 
