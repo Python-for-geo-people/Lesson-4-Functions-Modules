@@ -19,7 +19,7 @@ Let's define our first function called `celsius_to_fahr`:
 
   ```python
   >>> def celsius_to_fahr(temp):
-  ...  return 9/5 * temp + 32
+  ...    return 9/5 * temp + 32
   ```
   
 <img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/Function_anatomy.png" width="400">
