@@ -86,9 +86,9 @@ Functions such as the ones we just created can also be called from another scrip
 
 ### 1. Saving functions into a script file
  
-Before we can import our functions we need to create a new script file and save the functions that we just created into a Python file called **_temp_converter.py_** [0](#Footnotes).   
+Before we can import our functions we need to create a new script file and save the functions that we just created into a Python file called **_temp_converter.py_** \[ [0](#Footnotes) \].   
 
-We can take advantage of the **_History log_** -tab where we should be able to find all of the commands that we wrote to IPython console [1](#Footnotes):
+We can take advantage of the **_History log_** -tab where we should be able to find all of the commands that we wrote to IPython console \[ [1](#Footnotes) \]:
  
 <img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/history_log.PNG" width="400">
 
@@ -100,10 +100,10 @@ It should look like following:
 ### 2. Calling functions from another script file
 
 Now as we have saved our temperature conversion functions into a script file we can start using them. Let's create another script file called _**temp_calculator.py_**. 
-**IMPORTANT: Save the file into the SAME FOLDER where you saved the _temp_converter.py -file_**[2](#Footnotes).  
+**IMPORTANT: Save the file into the SAME FOLDER where you saved the _temp_converter.py -file_** \[ [2](#Footnotes) \].  
 
 Let's now import our _celsius_to_fahr_ -function from the _temp_converter.py_ -file by using adding a specific `import` statement at the top of our _temp_calculator.py_ -script file 
-in a following manner [3](#Footnotes):
+in a following manner \[ [3](#Footnotes) \]:
 
 ```python
 from temp_converter import celsius_to_fahr
@@ -118,7 +118,7 @@ from temp_converter import celsius_to_fahr
 print("Water freezing point in Fahrenheit:", celsius_to_fahr(0))
 ```
 
-Run the code by pressing F5 button or by pressing the arrow (<img style="float: right;" src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/run_button.PNG" width="20">) button in the Spyder. We should now get following output:
+Run the code by pressing F5 button or by pressing the <img style="float: right;" src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/run_button.PNG" width="20"> -button in Spyder. We should now get following output:
 
   
 ## Footnotes
