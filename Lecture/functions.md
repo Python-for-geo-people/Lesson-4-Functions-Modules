@@ -14,12 +14,12 @@ During the course we have already used some functions such as `print()` command 
 Let's consider the task from the first week when we converted temperatures from Fahrenheits to Celsius. Such an operation is a fairly common task 
 when dealing with temperatures. Thus we might need to repeat such calculations quite frequently when analysing or comparing e.g. weather or 
 climate changes between US and Europe.
-   
+
 Let's define our first function called `celsius_to_fahr`:
 
   ```python
-  def celsius_to_fahr(temp):
-    return 9/5 * temp + 32
+  >>> def celsius_to_fahr(temp):
+  ...  return 9/5 * temp + 32
   ```
   
 <img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/Function_anatomy.png" width="400">
@@ -45,8 +45,8 @@ You need to call it with its name and send your value to the required parameter(
 Now as we know how to create a function to convert Celsius to Fahrenheits, let's create another function called `kelvin_to_celsius`:
   
   ```python
-  def kelvin_to_celsius(temp_k):
-    return temp_k - 273.15
+  >>> def kelvin_to_celsius(temp_k):
+  ...  return temp_k - 273.15
   ```
 
 And let's use it in a similar way as the earlier one:
@@ -54,21 +54,20 @@ And let's use it in a similar way as the earlier one:
    ```python
    >>> absolute_zero = kelvin_to_celsius(temp_k=0)
    >>> print('Absolute zero in Celsius:', absolute_zero)
+   Absolute zero in Celsius: -273.15
    ```
 
 What about converting Kelvin to Fahrenheits? We could write out an own formula for it, but we don’t need to. Instead, we can compose it by using the two functions we have already created and 
 calling the other functions inside the function we are now creating: 
     
     ```python
-    def kelvin_to_fahrenheit(temp_k):
-       # Kelvin in celsius
-       temp_c = kelvin_to_celsius(temp_k)
-       
-       # Celsius in Fahrenheit
-       temp_f = celsius_to_fahr(temp_c)
-       
-       # Return the result
-       return temp_f
+    >>> def kelvin_to_fahrenheit(temp_k):
+    ...   # Kelvin in celsius
+    ...   temp_c = kelvin_to_celsius(temp_k)
+    ...   # Celsius in Fahrenheit
+    ...   temp_f = celsius_to_fahr(temp_c)
+    ...   # Return the result
+    ...   return temp_f
        
     >>> absolute_zero_f = kelvin_to_fahrenheit(temp_k=0)
     >>> print('Absolute zero in Fahrenheit:', absolute_zero_f)
