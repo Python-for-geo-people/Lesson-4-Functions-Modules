@@ -17,7 +17,7 @@ climate changes between US and Europe.
    
 Let's define our first function called ´fahr_to_celsius´:
 
-  ```
+  ```python
   def fahr_to_celsius(temp):
     return 9/5 * temp + 32
   ```
