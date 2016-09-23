@@ -100,7 +100,7 @@ It should look like following:
 ### 2. Calling functions from another script file
 
 Now as we have saved our temperature conversion functions into a script file we can start using them. Let's create another script file called `temp_calculator.py`. 
-**IMPORTANT: Save the file into the SAME FOLDER where you saved the `_temp_converter.py` -file_** \[[2](#Footnotes)\].  
+**IMPORTANT**: Save the file into the SAME FOLDER where you saved the `temp_converter.py` -file \[[2](#Footnotes)\].  
 
 Let's now import our `celsius_to_fahr` -function from the other script by adding a specific `import` statement at the top of our `temp_calculator.py` -script \[[3](#Footnotes)\].
 Let's also use the function so that we can see that it is working:
@@ -117,8 +117,10 @@ Run the code by pressing F5 button or by pressing the <img style="float: right;"
 
 <img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/using_function_from_another_script.PNG" width="600">
 
-It is also possible to import more functions at the same time by listing and separating them with colon (`from script import func1, func2, func3`) but quite often it is useful to import 
-all functions at once from the script by using \* symbol \[[4]\]. Let's modify our import statement and test that all functions work:
+It is also possible to import more functions at the same time by listing and separating them with colon: 
+`from script import func1, func2, func3`
+ 
+but quite often it is useful to import all functions at once from the script by using \* symbol \[[4]\]. Let's modify our import statement and test that all functions work:
 
 ```python
 from temp_converter import *
