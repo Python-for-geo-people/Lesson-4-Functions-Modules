@@ -99,7 +99,7 @@ It should look like following:
  
 ### 2. Calling functions from another script file
 
-Now as we have saved our temperature conversion functions into a script file we can start using them. Let's create another script file called <span style="color:red">temp_calculator.py</span>. 
+Now as we have saved our temperature conversion functions into a script file we can start using them. Let's create another script file called ```diff - temp_calculator.py ```. 
 **IMPORTANT**: Save the file into the SAME FOLDER where you saved the <span style="color:red">temp_converter.py</span> -file \[[2](#Footnotes)\].  
 
 Let's now import our `celsius_to_fahr` -function from the other script by adding a specific `import` statement at the top of our <span style="color:red">temp_calculator.py</span> -script \[[3](#Footnotes)\].
