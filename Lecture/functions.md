@@ -46,7 +46,7 @@ Now as we know how to create a function to convert Celsius to Fahrenheits, let's
   
   ```python
   >>> def kelvin_to_celsius(temp_k):
-  ...  return temp_k - 273.15
+  ...    return temp_k - 273.15
   ```
 
 And let's use it in a similar way as the earlier one:
@@ -62,19 +62,39 @@ calling the other functions inside the function we are now creating:
     
     ```python
     >>> def kelvin_to_fahrenheit(temp_k):
-    ...   # Kelvin in celsius
-    ...   temp_c = kelvin_to_celsius(temp_k)
-    ...   # Celsius in Fahrenheit
-    ...   temp_f = celsius_to_fahr(temp_c)
-    ...   # Return the result
-    ...   return temp_f
+    ...    # Kelvin in celsius
+    ...    temp_c = kelvin_to_celsius(temp_k)
+    ...    # Celsius in Fahrenheit
+    ...    temp_f = celsius_to_fahr(temp_c)
+    ...    # Return the result
+    ...    return temp_f
        
     >>> absolute_zero_f = kelvin_to_fahrenheit(temp_k=0)
     >>> print('Absolute zero in Fahrenheit:', absolute_zero_f)
     Absolute zero in Fahrenheit: -459.66999999999996
     ```
 
+## Importing functions from a script
 
+Functions such as the ones we just created can also be called from another script.
+
+**Saving functions into a script file**
+ 
+Before we can import our functions we need to create a new script file and save the functions that we just created into a Python file called _temp_converter.py_ \[0\].   
+We can take advantage of the _History log_ -tab where we should be able to find all of the commands that we wrote to IPython console:
+ 
+<img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/history_log.PNG" width="400">
+
+Copy and paste the functions from the History log -tab and save them into the temp_converter.py -script. 
+It should look like following:
+
+<img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/temp_converter.PNG" width="400">
+ 
+**Using functions from another script file**
+
+
+
+\[0\] See [earlier materials concerning Spyder](spyder.md) if you don't remember how to save a new script file from Spyder. 
 
 
 
