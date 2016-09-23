@@ -86,9 +86,9 @@ Functions such as the ones we just created can also be called from another scrip
 
 ### 1. Saving functions into a script file
  
-Before we can import our functions we need to create a new script file and save the functions that we just created into a Python file called **_temp_converter.py_** \[ [0](#Footnotes) \].   
+Before we can import our functions we need to create a new script file and save the functions that we just created into a Python file called **_temp_converter.py_** \[[0](#Footnotes)\].   
 
-We can take advantage of the **_History log_** -tab where we should be able to find all of the commands that we wrote to IPython console \[ [1](#Footnotes) \]:
+We can take advantage of the **_History log_** -tab where we should be able to find all of the commands that we wrote to IPython console \[[1](#Footnotes)\]:
  
 <img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/history_log.PNG" width="400">
 
@@ -100,10 +100,10 @@ It should look like following:
 ### 2. Calling functions from another script file
 
 Now as we have saved our temperature conversion functions into a script file we can start using them. Let's create another script file called _**temp_calculator.py_**. 
-**IMPORTANT: Save the file into the SAME FOLDER where you saved the _temp_converter.py -file_** \[ [2](#Footnotes) \].  
+**IMPORTANT: Save the file into the SAME FOLDER where you saved the _temp_converter.py -file_** \[[2](#Footnotes)\].  
 
 Let's now import our _celsius_to_fahr_ -function from the _temp_converter.py_ -file by using adding a specific `import` statement at the top of our _temp_calculator.py_ -script file 
-in a following manner \[ [3](#Footnotes) \]:
+in a following manner \[[3](#Footnotes)\]:
 
 ```python
 from temp_converter import celsius_to_fahr
@@ -118,15 +118,18 @@ from temp_converter import celsius_to_fahr
 print("Water freezing point in Fahrenheit:", celsius_to_fahr(0))
 ```
 
-Run the code by pressing F5 button or by pressing the <img style="float: right;" src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/run_button.PNG" width="20"> -button in Spyder. We should now get following output:
+Run the code by pressing F5 button or by pressing the <img style="float: right;" src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/run_button.PNG" width="20"> 
+-button in Spyder. We should now get following output:
 
-  
+<img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/using_function_from_another_script.PNG" width="400">
+
+
 ## Footnotes
 
-\[0\] See [earlier materials concerning Spyder](spyder.md) if you don't remember how to save a new script file from Spyder.
-\[1\] History log -tab can be found from the same panel where we have executed our codes (bottom right next to IPython console).
-\[2\] When communicating between script files, it is necessary to keep them in the same folder so that Python can find them (there are also other ways but this is the easiest).
-\[3\]Following the principles of good programming all `import` -statements that you use should always be written at the top of the script file.  
+- \[0\] See [earlier materials concerning Spyder](spyder.md) if you don't remember how to save a new script file from Spyder.
+- \[1\] History log -tab can be found from the same panel where we have executed our codes (bottom right next to IPython console).
+- \[2\] When communicating between script files, it is necessary to keep them in the same folder so that Python can find them (there are also other ways but this is the easiest).
+- \[3\]Following the principles of good programming all `import` -statements that you use should always be written at the top of the script file.  
 
 
 **TODO**
