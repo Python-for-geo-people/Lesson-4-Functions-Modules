@@ -22,7 +22,7 @@ Let's define our first function called ´fahr_to_celsius´:
     return 9/5 * temp + 32
   ```
   
-![Anatomy of a function](../img/Function_anatomy.png)
+<img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/Function_anatomy.png" width="400">
 
 The function definition opens with the keyword def followed by the name of the function and a parenthesized list of parameter names. 
 The body of the function — the statements that are executed when it runs — is indented below the definition line.
