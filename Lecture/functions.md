@@ -22,6 +22,16 @@ Let's define our first function called ´fahr_to_celsius´:
     return 9/5 * temp + 32
   ```
   
+![Anatomy of a function](../img/Function_anatomy.png)
+
+The function definition opens with the keyword def followed by the name of the function and a parenthesized list of parameter names. 
+The body of the function — the statements that are executed when it runs — is indented below the definition line.
+
+When we call the function, the values we pass to it are assigned to those variables so that we can use them inside the function. 
+Inside the function, we use a return statement to send a result back to whoever asked for it.
+
+Let’s try running our function. Calling our own function is no different from calling any other function:  
+
 **TODO**
 
 - Explain different parts of function
