@@ -99,10 +99,10 @@ It should look like following:
  
 ### 2. Calling functions from another script file
 
-Now as we have saved our temperature conversion functions into a script file we can start using them. Let's create another script file called _**temp_calculator.py**_. 
-**IMPORTANT: Save the file into the SAME FOLDER where you saved the _temp_converter.py -file_** \[[2](#Footnotes)\].  
+Now as we have saved our temperature conversion functions into a script file we can start using them. Let's create another script file called `temp_calculator.py`. 
+**IMPORTANT: Save the file into the SAME FOLDER where you saved the `_temp_converter.py` -file_** \[[2](#Footnotes)\].  
 
-Let's now import our _celsius_to_fahr_ -function from the other script by adding a specific `import` statement at the top of our _temp_calculator.py_ -script \[[3](#Footnotes)\].
+Let's now import our `celsius_to_fahr` -function from the other script by adding a specific `import` statement at the top of our `temp_calculator.py` -script \[[3](#Footnotes)\].
 Let's also use the function so that we can see that it is working:
 
 ```python
@@ -117,14 +117,28 @@ Run the code by pressing F5 button or by pressing the <img style="float: right;"
 
 <img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/using_function_from_another_script.PNG" width="600">
 
+It is also possible to import more functions at the same time by listing and separating them with colon (`from script import func1, func2, func3`) but quite often it is useful to import 
+all functions at once from the script by using \* symbol \[[4]\]. Let's modify our import statement and test that all functions work:
+
+```python
+from temp_converter import *
+
+# Testing that all functions from another file works
+print("Water freezing point in Fahrenheit:", celsius_to_fahr(0))
+print('Absolute zero in Celsius:', kelvin_to_celsius(temp_k=0))
+print('Absolute zero in Fahrenheit:', kelvin_to_fahrenheit(temp_k=0))
+```
+
+ 
+ 
 
 ## Footnotes
 
 - \[0\] See [earlier materials concerning Spyder](spyder.md) if you don't remember how to save a new script file from Spyder.
 - \[1\] History log -tab can be found from the same panel where we have executed our codes (bottom right next to IPython console).
 - \[2\] When communicating between script files, it is necessary to keep them in the same folder so that Python can find them (there are also other ways but this is the easiest).
-- \[3\]Following the principles of good programming all `import` -statements that you use should always be written at the top of the script file.  
-
+- \[3\] Following the principles of good programming all `import` -statements that you use should always be written at the top of the script file.  
+- \[4\] Downside of using \* -symbol when importing the functions from another script is that you won't see what functions are imported, unless checking them from the script itself.  
 
 **TODO**
 
