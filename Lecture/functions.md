@@ -60,7 +60,7 @@ And let's use it in a similar way as the earlier one:
 What about converting Kelvin to Fahrenheits? We could write out an own formula for it, but we don’t need to. Instead, we can compose it by using the two functions we have already created and 
 calling the other functions inside the function we are now creating: 
     
-    ```python
+    python
     >>> def kelvin_to_fahrenheit(temp_k):
     ...    # Kelvin in celsius
     ...    temp_c = kelvin_to_celsius(temp_k)
@@ -69,16 +69,13 @@ calling the other functions inside the function we are now creating:
     ...    # Return the result
     ...    return temp_f
     
-    ```
 
 Let's use the function:
 
-    ```python
     >>> absolute_zero_f = kelvin_to_fahrenheit(temp_k=0)
     >>> print('Absolute zero in Fahrenheit:', absolute_zero_f)
     Absolute zero in Fahrenheit: -459.66999999999996
-    
-    ```
+
 
 ## Importing functions from a script
 
