@@ -69,7 +69,9 @@ calling the other functions inside the function we are now creating:
     ...    # Return the result
     ...    return temp_f
     ```
-    
+
+Let's use the function:
+
     ```
     >>> absolute_zero_f = kelvin_to_fahrenheit(temp_k=0)
     >>> print('Absolute zero in Fahrenheit:', absolute_zero_f)
