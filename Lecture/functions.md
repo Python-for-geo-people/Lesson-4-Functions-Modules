@@ -118,7 +118,7 @@ from temp_converter import celsius_to_fahr
 print("Water freezing point in Fahrenheit:", celsius_to_fahr(0))
 ```
 
-Run the code by pressing F5 button or by pressing the arrow (<img style="float: right;" src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/run_button.PNG" heigth="40">) button in the Spyder. We should now get following output:
+Run the code by pressing F5 button or by pressing the arrow (<img style="float: right;" src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/run_button.PNG" heigth="10">) button in the Spyder. We should now get following output:
 
   
 ## Footnotes
