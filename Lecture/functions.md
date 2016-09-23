@@ -84,9 +84,10 @@ Absolute zero in Fahrenheit: -459.66999999999996
 
 Functions such as the ones we just created can also be called from another script.
 
-**Saving functions into a script file**
+### 1. Saving functions into a script file
  
 Before we can import our functions we need to create a new script file and save the functions that we just created into a Python file called _temp_converter.py_ \[0\].   
+
 We can take advantage of the _History log_ -tab where we should be able to find all of the commands that we wrote to IPython console:
  
 <img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/history_log.PNG" width="400">
@@ -96,7 +97,7 @@ It should look like following:
 
 <img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/temp_converter.PNG" width="400">
  
-**Using functions from another script file**
+### 2. Using functions from another script file
 
 
 
