@@ -121,7 +121,7 @@ print("Water freezing point in Fahrenheit:", celsius_to_fahr(0))
 Run the code by pressing F5 button or by pressing the <img style="float: right;" src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/run_button.PNG" width="20"> 
 -button in Spyder. We should now get following output:
 
-<img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/using_function_from_another_script.PNG" width="400">
+<img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/using_function_from_another_script.PNG" width="600">
 
 
 ## Footnotes
