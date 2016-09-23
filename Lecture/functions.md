@@ -51,31 +51,32 @@ Now as we know how to create a function to convert Celsius to Fahrenheits, let's
 
 And let's use it in a similar way as the earlier one:
 
-   ```python
-   >>> absolute_zero = kelvin_to_celsius(temp_k=0)
-   >>> print('Absolute zero in Celsius:', absolute_zero)
-   Absolute zero in Celsius: -273.15
+  ```python
+  >>> absolute_zero = kelvin_to_celsius(temp_k=0)
+  >>> print('Absolute zero in Celsius:', absolute_zero)
+  Absolute zero in Celsius: -273.15
    ```
 
 What about converting Kelvin to Fahrenheits? We could write out an own formula for it, but we don’t need to. Instead, we can compose it by using the two functions we have already created and 
 calling the other functions inside the function we are now creating: 
     
-    python
-    >>> def kelvin_to_fahrenheit(temp_k):
-    ...    # Kelvin in celsius
-    ...    temp_c = kelvin_to_celsius(temp_k)
-    ...    # Celsius in Fahrenheit
-    ...    temp_f = celsius_to_fahr(temp_c)
-    ...    # Return the result
-    ...    return temp_f
-    
+  ```python
+  >>> def kelvin_to_fahrenheit(temp_k):
+  ...    # Kelvin in celsius
+  ...    temp_c = kelvin_to_celsius(temp_k)
+  ...    # Celsius in Fahrenheit
+  ...    temp_f = celsius_to_fahr(temp_c)
+  ...    # Return the result
+  ...    return temp_f
+  ```  
 
 Let's use the function:
-    
-    python
-    >>> absolute_zero_f = kelvin_to_fahrenheit(temp_k=0)
-    >>> print('Absolute zero in Fahrenheit:', absolute_zero_f)
-    Absolute zero in Fahrenheit: -459.66999999999996
+  
+  ```python
+  >>> absolute_zero_f = kelvin_to_fahrenheit(temp_k=0)
+  >>> print('Absolute zero in Fahrenheit:', absolute_zero_f)
+  Absolute zero in Fahrenheit: -459.66999999999996
+  ```
 
 
 ## Importing functions from a script
