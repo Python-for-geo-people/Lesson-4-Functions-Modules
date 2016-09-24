@@ -220,18 +220,18 @@ was imported from temp_converter.py file.
 5. That's it! Now we have a simple temperature calculator that has a simple control for the user where s/he can change the output by using the `convert_to` -parameter. Now as we added the short 
 description in the beginning of the function we can use the `help()` function in Python to find out how our function should be used. Run the script and try following:
   
-     ```python
-     >>> help(temp_calculator)
-     ```
+  ```python
+  >>> help(temp_calculator)
+  ```
   
 Let's use it:
 
-    ```python
-    >>> temp_in_kelvin = 30
-    >>> temperature_c = temp_calculator(temp=temp_in_kelvin, convert_to="C")
-    >>> print("Temperature", temp_in_kelvin, "in Kelvin is", temperature_c, "in Celsius")
-    Temperature 30 in Kelvin is -243.14999999999998 in Celsius.
-    ```
+  ```python
+  >>> temp_in_kelvin = 30
+  >>> temperature_c = temp_calculator(temp=temp_in_kelvin, convert_to="C")
+  >>> print("Temperature", temp_in_kelvin, "in Kelvin is", temperature_c, "in Celsius")
+  Temperature 30 in Kelvin is -243.14999999999998 in Celsius.
+  ```
 
 Next, [continue with the lecture materials.](../README.md)
 
