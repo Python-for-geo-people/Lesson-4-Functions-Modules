@@ -229,19 +229,12 @@ Let's use it:
     Temperature 30 in Kelvin is -243.14999999999998 in Celsius.
     ```
 
+Next, [continue with the lecture materials.](../README.md)
 
-## 5. Footnotes
+## Footnotes
 
 - \[0\] See [earlier materials concerning Spyder](spyder.md) if you don't remember how to save a new script file from Spyder.
 - \[1\] History log -tab can be found from the same panel where we have executed our codes (bottom right next to IPython console).
 - \[2\] When communicating between script files, it is necessary to keep them in the same folder so that Python can find them (there are also other ways but this is the easiest).
 - \[3\] Following the principles of good programming all `import` -statements that you use should always be written at the top of the script file.  
-- \[4\] Downside of importing using \* symbol for importing all functions is that you won't see what functions are imported, unless checking them from the script itself. 
-   
-
-**TODO**
-
-- Explain different parts of function
-- Create a simple function
-- Create a py-file with functions
-- import those functions from the file and use them from another file.
+- \[4\] Downside of importing using \* symbol for importing all functions is that you won't see what functions are imported, unless checking them from the script itself.
