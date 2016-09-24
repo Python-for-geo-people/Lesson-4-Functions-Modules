@@ -7,7 +7,7 @@ specific functionalities (i.e. functions) that you can use for different tasks. 
 
 ## Lesson overview
 
-1. Spyder
-2. Functions
-3. Libraries
+1. [Spyder](Lecture/spyder.md)
+2. [Functions](Lecture/functions.md)
+3. [Libraries](Lecture/libraries.md)
 
