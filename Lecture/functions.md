@@ -111,8 +111,8 @@ It should look like following:
 
 Now as we have saved our temperature conversion functions into a script file we can start using them. 
 
-<ol start="2"><li>Let's create another script file called _temp_calculator.py_. 
-<strong>IMPORTANT</strong>: Save the file into the SAME FOLDER where you saved the <em>temp_converter.p</em> -file [2]. </li></ol>
+<ol start="2"><li>Let's create another script file called <em>temp_calculator.py</em>. 
+<strong>IMPORTANT</strong>: Save the file into the SAME FOLDER where you saved the <em>temp_converter.py</em> -file [2]. </li></ol>
 
 <ol start="3"><li>Let's now import our <code>celsius_to_fahr</code> -function from the other script by adding a specific <code>import</code> statement at the top of our <em>temp_calculator.py</em> -script.
 Let's also use the function so that we can see that it is working [3]:</li></ol>
