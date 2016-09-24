@@ -6,10 +6,9 @@
  2. [Anatomy of a function](#2)
  3. [Calling functions](#3)
  4. [Importing functions from a script](#4)
- 
-    4.1. Saving functions into a Python script
-    4.2. Calling functions from a script
-    4.3. Temperature calculator
+    1. [Saving functions into a Python script](#4.1)
+    2. [Calling functions from a script](#4.2)
+    3. [Temperature calculator](#4.3)
 
 ##<a name="1">1. What is a function?
 
@@ -94,7 +93,7 @@ calling those from the function we are now creating:
 
 Functions such as the ones we just created can also be called from another script.
 
-### 4.1. Saving functions into a script file
+###<a name="4.1"> 4.1. Saving functions into a script file
  
 Before we can import our functions we need to create a new script file and save the functions that we just created into a Python file called _temp_converter.py_ \[[0](#Footnotes)\].   
 
@@ -108,7 +107,7 @@ It should look like following:
 
 <img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/temp_converter.PNG" width="400">
  
-### 4.2. Calling functions from another script file
+###<a name="4.2"> 4.2. Calling functions from another script file
 
 Now as we have saved our temperature conversion functions into a script file we can start using them. 
 
@@ -149,7 +148,7 @@ Let's modify the import statement in our script and test that all functions work
   print('Absolute zero in Fahrenheit:', kelvin_to_fahrenheit(temp_k=0))
   ```
 
-### 4.3. Temperature calculator
+###<a name="4.3"> 4.3. Temperature calculator
 
 So far our functions has had only one parameter but it is also possible to define a function with multiple parameters. 
 Let's now make a simple `temp_calculator` -function that converts and returns Kelvin temperature to either Celsius or Fahrenheit. Function will have two parameters:
