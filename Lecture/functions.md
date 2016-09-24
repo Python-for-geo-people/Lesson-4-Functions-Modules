@@ -152,76 +152,77 @@ Let's now make a simple `temp_calculator` -function that converts and returns Ke
  - **temp** = parameter for passing temperature in Kelvin
  - **convert\_to** = parameter that determines whether to output should be in Celsius or in Fahrenheit (using letters "C" or "F" accordingly)
  
+ 
 1. Let's start defining our function by giving it a name and setting the parameters:
 
-```python
-def temp_calculator(temp, convert_to):
-```
+    ```python
+    def temp_calculator(temp, convert_to):
+    ```
 
 2. Next, we need to add conditional statements that check whether the result temperature is wanted in Celsius or in Fahrenheit and then call corresponding function that
 was imported from temp_converter.py file. 
 
-```python
-def temp_calculator(temp, convert_to):
-    # Check if user wants the temperature as Celsius
-    if convert_to == "C":
-        # Convert the value to Celsius using dedicated function for the task that we imported from another script
-        converted_temp = kelvin_to_celsius(temp_k=temp)
-    elif convert_to == "F":
-        # Convert the value to Fahrenheit using dedicated function for the task that we imported from another script
-        converted_temp = kelvin_to_fahrenheit(temp_k=temp)
-```
+    ```python
+    def temp_calculator(temp, convert_to):
+        # Check if user wants the temperature as Celsius
+        if convert_to == "C":
+            # Convert the value to Celsius using dedicated function for the task that we imported from another script
+            converted_temp = kelvin_to_celsius(temp_k=temp)
+        elif convert_to == "F":
+            # Convert the value to Fahrenheit using dedicated function for the task that we imported from another script
+            converted_temp = kelvin_to_fahrenheit(temp_k=temp)
+    ```
 
 3. Next, we need to add a **return statement** so that our function sends back the value that we are interested in:
  
-```python
-def temp_calculator(temp, convert_to):
-    # Check if user wants the temperature as Celsius
-    if convert_to == "C":
-        # Convert the value to Celsius using dedicated function for the task that we imported from another script
-        converted_temp = kelvin_to_celsius(temp_k=temp)
-    elif convert_to == "F":
-        # Convert the value to Fahrenheit using dedicated function for the task that we imported from another script
-        converted_temp = kelvin_to_fahrenheit(temp_k=temp)
-    # Return the result
-    return converted_temp
-```
+    ```python
+    def temp_calculator(temp, convert_to):
+        # Check if user wants the temperature as Celsius
+        if convert_to == "C":
+            # Convert the value to Celsius using dedicated function for the task that we imported from another script
+            converted_temp = kelvin_to_celsius(temp_k=temp)
+        elif convert_to == "F":
+            # Convert the value to Fahrenheit using dedicated function for the task that we imported from another script
+            converted_temp = kelvin_to_fahrenheit(temp_k=temp)
+        # Return the result
+        return converted_temp
+    ```
 
 4. Lastly, as we want to be good programmers, we add a short message at the beginning of our function that tells what the function does and how the parameters work:
 
- ```python
-def temp_calculator(temp, convert_to):
-    """Function for converting Kelvin temperature to Celsius or Fahrenheit.
-    Parameters:
-    temp: Temperature in Kelvin
-    convert_to: "C" or "F" that corresponds to Celsius or Fahrenheit accordingly"""
-    
-    # Check if user wants the temperature as Celsius
-    if convert_to == "C":
-        # Convert the value to Celsius using dedicated function for the task that we imported from another script
-        converted_temp = kelvin_to_celsius(temp_k=temp)
-    elif convert_to == "F":
-        # Convert the value to Fahrenheit using dedicated function for the task that we imported from another script
-        converted_temp = kelvin_to_fahrenheit(temp_k=temp)
-    # Return the result
-    return converted_temp
-```
+    ```python
+    def temp_calculator(temp, convert_to):
+        """Function for converting Kelvin temperature to Celsius or Fahrenheit.
+        Parameters:
+        temp: Temperature in Kelvin
+        convert_to: "C" or "F" that corresponds to Celsius or Fahrenheit accordingly"""
+        
+        # Check if user wants the temperature as Celsius
+        if convert_to == "C":
+            # Convert the value to Celsius using dedicated function for the task that we imported from another script
+            converted_temp = kelvin_to_celsius(temp_k=temp)
+        elif convert_to == "F":
+            # Convert the value to Fahrenheit using dedicated function for the task that we imported from another script
+            converted_temp = kelvin_to_fahrenheit(temp_k=temp)
+        # Return the result
+        return converted_temp
+    ```
 
 5. That's it! Now we have a simple temperature calculator that has a simple control for the user where s/he can change the output by using the `convert_to` -parameter. Now as we added the short 
 description in the beginning of the function we can use the `help()` function in Python to find out how our function should be used. Run the script and try following:
   
- ```python
- >>> help(temp_calculator)
- ```
+     ```python
+     >>> help(temp_calculator)
+     ```
   
 Let's use it:
 
- ```python
- >>> temp_in_kelvin = 30
- >>> temperature_c = temp_calculator(temp=temp_in_kelvin, convert_to="C")
- >>> print("Temperature", temp_in_kelvin, "in Kelvin is", temperature_c, "in Celsius")
- Temperature 30 in Kelvin is XX in Celsius.
- ```
+    ```python
+    >>> temp_in_kelvin = 30
+    >>> temperature_c = temp_calculator(temp=temp_in_kelvin, convert_to="C")
+    >>> print("Temperature", temp_in_kelvin, "in Kelvin is", temperature_c, "in Celsius")
+    Temperature 30 in Kelvin is XX in Celsius.
+    ```
 
 
 ## 5. Footnotes
