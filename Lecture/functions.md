@@ -136,7 +136,7 @@ Let's also use the function so that we can see that it is working [3]:</li></ol>
   from my_script import func1, func2, func3
   ```
  
-<ol start="5"><li>However, quite often it is useful to import all of its' functions at once  that can be used by using specific \* -character. 
+<ol start="5"><li>However, quite often it is useful to import all of its' functions at once  that can be used by using specific * -character. 
 Let's modify the import statement in our script and test that all functions work [4]: </li></ol>
 
   ```python
