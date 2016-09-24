@@ -112,11 +112,11 @@ It should look like following:
 
 Now as we have saved our temperature conversion functions into a script file we can start using them. 
 
-2. Let's create another script file called _temp_calculator.py_. 
-**IMPORTANT**: Save the file into the SAME FOLDER where you saved the _temp_converter.py_ -file \[[2](#Footnotes)\].  
+<ol start="2"><li>Let's create another script file called _temp_calculator.py_. 
+**IMPORTANT**: Save the file into the SAME FOLDER where you saved the _temp_converter.py_ -file \[[2](#Footnotes)\].  </li></ol>
 
-3. Let's now import our `celsius_to_fahr` -function from the other script by adding a specific `import` statement at the top of our _temp_calculator.py_ -script \[[3](#Footnotes)\].
-Let's also use the function so that we can see that it is working:
+<ol start="3"><li>Let's now import our `celsius_to_fahr` -function from the other script by adding a specific `import` statement at the top of our _temp_calculator.py_ -script \[[3](#Footnotes)\].
+Let's also use the function so that we can see that it is working:</li></ol>
 
     ```python
     from temp_converter import celsius_to_fahr
@@ -125,17 +125,17 @@ Let's also use the function so that we can see that it is working:
     print("Water freezing point in Fahrenheit:", celsius_to_fahr(0))
     ```
 
-4. Run the code by pressing F5 button or by pressing the <img style="float: right;" src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/run_button.PNG" width="20"> 
--button in Spyder. We should now get following output:
+<ol start="4"> <li>Run the code by pressing F5 button or by pressing the <img style="float: right;" src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/run_button.PNG" width="20"> 
+-button in Spyder. We should now get following output:</li></ol>
 
 <img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/using_function_from_another_script.PNG" width="600">
 
-It is also possible to import more functions at the same time by listing and separating them with colon: 
+- _It is also possible to import more functions at the same time by listing and separating them with colon:_ 
 
     ```from my_script import func1, func2, func3```
  
-5. However, quite often it is useful to import all of its' functions at once \[[4](#Footnotes)\] that can be used by using specific \* -character. 
-Let's modify the import statement in our script and test that all functions work:
+<ol start="5"><li>3</li> However, quite often it is useful to import all of its' functions at once \[[4](#Footnotes)\] that can be used by using specific \* -character. 
+Let's modify the import statement in our script and test that all functions work </ol>:
 
     ```python
     from temp_converter import *  
