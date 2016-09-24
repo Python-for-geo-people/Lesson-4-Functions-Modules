@@ -26,12 +26,12 @@ Let's consider the task from the first week when we converted temperatures from 
 when dealing with temperatures. Thus we might need to repeat such calculations quite frequently when analysing or comparing e.g. weather or 
 climate changes between US and Europe.
 
-Let's define our first function called `celsius_to_fahr`:
+1. Let's define our first function called `celsius_to_fahr`:
 
-  ```python
-  >>> def celsius_to_fahr(temp):
-  ...    return 9/5 * temp + 32
-  ```
+    ```python
+    >>> def celsius_to_fahr(temp):
+    ...    return 9/5 * temp + 32
+    ```
   
 <img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/Function_anatomy.png" width="400">
 
@@ -43,52 +43,52 @@ Inside the function, we use a return statement to send a result back to whoever 
 
 ##<a name="3"> 3. Calling functions
 
-Let’s try running our function. Calling our self-defined function is no different from calling any other function such as `print()`. 
+2. Let’s try running our function. Calling our self-defined function is no different from calling any other function such as `print()`. 
 You need to call it with its name and send your value to the required parameter(s) inside the parentheses:  
   
-```python
->>> freezing_point =  celsius_to_fahr(0)
->>> print('Freezing point of water in Fahrenheits:', freezing_point)
-Freezing point of water in Fahrenheits: 32.0
->>> print('Boiling point of water in Fahrenheits:', celsius_to_fahr(100))
-Boiling point of water in Fahrenheits: 212.0
-```
+    ```python
+    >>> freezing_point =  celsius_to_fahr(0)
+    >>> print('Freezing point of water in Fahrenheits:', freezing_point)
+    Freezing point of water in Fahrenheits: 32.0
+    >>> print('Boiling point of water in Fahrenheits:', celsius_to_fahr(100))
+    Boiling point of water in Fahrenheits: 212.0
+    ```
 
-Now as we know how to create a function to convert Celsius to Fahrenheits, let's create another function called `kelvin_to_celsius`:
+3. Now as we know how to create a function to convert Celsius to Fahrenheits, let's create another function called `kelvin_to_celsius`:
   
-```python
->>> def kelvin_to_celsius(temp_k):
-...    return temp_k - 273.15
-```
+    ```python
+    >>> def kelvin_to_celsius(temp_k):
+    ...    return temp_k - 273.15
+    ```
 
-And let's use it in a similar way as the earlier one:
+4. And let's use it in a similar way as the earlier one:
 
-```python
->>> absolute_zero = kelvin_to_celsius(temp_k=0)
->>> print('Absolute zero in Celsius:', absolute_zero)
-Absolute zero in Celsius: -273.15
-```
+    ```python
+    >>> absolute_zero = kelvin_to_celsius(temp_k=0)
+    >>> print('Absolute zero in Celsius:', absolute_zero)
+    Absolute zero in Celsius: -273.15
+    ```
 
-What about converting Kelvin to Fahrenheits? We could write out an own formula for it, but we don’t need to. Instead, we can compose it by using the two functions we have already created and 
+5. What about converting Kelvin to Fahrenheits? We could write out an own formula for it, but we don’t need to. Instead, we can compose it by using the two functions we have already created and 
 calling those from the function we are now creating: 
     
-```python
->>> def kelvin_to_fahrenheit(temp_k):
-...    # Kelvin in celsius
-...    temp_c = kelvin_to_celsius(temp_k)
-...    # Celsius in Fahrenheit
-...    temp_f = celsius_to_fahr(temp_c)
-...    # Return the result
-...    return temp_f
-```  
+    ```python
+    >>> def kelvin_to_fahrenheit(temp_k):
+    ...    # Kelvin in celsius
+    ...    temp_c = kelvin_to_celsius(temp_k)
+    ...    # Celsius in Fahrenheit
+    ...    temp_f = celsius_to_fahr(temp_c)
+    ...    # Return the result
+    ...    return temp_f
+    ```  
 
-Let's use the function:
+6. Let's use the function:
   
-```python
->>> absolute_zero_f = kelvin_to_fahrenheit(temp_k=0)
->>> print('Absolute zero in Fahrenheit:', absolute_zero_f)
-Absolute zero in Fahrenheit: -459.66999999999996
-```
+    ```python
+    >>> absolute_zero_f = kelvin_to_fahrenheit(temp_k=0)
+    >>> print('Absolute zero in Fahrenheit:', absolute_zero_f)
+    Absolute zero in Fahrenheit: -459.66999999999996
+    ```
 
 ##<a name="4">4. Importing functions from a script
 
@@ -103,46 +103,48 @@ to IPython console \[[1](#Footnotes)\]:
  
 <img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/history_log.PNG" width="300">
 
-Copy and paste (only) the functions that we wrote earlier from the History log -tab and save them into the _temp_converter.py_ -script. 
+1. Copy and paste (only) the functions that we wrote earlier from the History log -tab and save them into the _temp_converter.py_ -script ( _optionally just write them again into the file_ ). 
 It should look like following:
 
 <img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/temp_converter.PNG" width="400">
  
 ### 4.2. Calling functions from another script file
 
-Now as we have saved our temperature conversion functions into a script file we can start using them. Let's create another script file called _temp_calculator.py_. 
+Now as we have saved our temperature conversion functions into a script file we can start using them. 
+
+2. Let's create another script file called _temp_calculator.py_. 
 **IMPORTANT**: Save the file into the SAME FOLDER where you saved the _temp_converter.py_ -file \[[2](#Footnotes)\].  
 
-Let's now import our `celsius_to_fahr` -function from the other script by adding a specific `import` statement at the top of our _temp_calculator.py_ -script \[[3](#Footnotes)\].
+3. Let's now import our `celsius_to_fahr` -function from the other script by adding a specific `import` statement at the top of our _temp_calculator.py_ -script \[[3](#Footnotes)\].
 Let's also use the function so that we can see that it is working:
 
-```python
-from temp_converter import celsius_to_fahr
+    ```python
+    from temp_converter import celsius_to_fahr
+    
+    # Testing that the function from another file works
+    print("Water freezing point in Fahrenheit:", celsius_to_fahr(0))
+    ```
 
-# Testing that the function from another file works
-print("Water freezing point in Fahrenheit:", celsius_to_fahr(0))
-```
-
-Run the code by pressing F5 button or by pressing the <img style="float: right;" src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/run_button.PNG" width="20"> 
+4. Run the code by pressing F5 button or by pressing the <img style="float: right;" src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/run_button.PNG" width="20"> 
 -button in Spyder. We should now get following output:
 
 <img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/using_function_from_another_script.PNG" width="600">
 
 It is also possible to import more functions at the same time by listing and separating them with colon: 
 
-```from my_script import func1, func2, func3```
+    ```from my_script import func1, func2, func3```
  
-However, quite often it is useful to import all of its' functions at once \[[4](#Footnotes)\] that can be used by using specific \* -character. 
+5. However, quite often it is useful to import all of its' functions at once \[[4](#Footnotes)\] that can be used by using specific \* -character. 
 Let's modify the import statement in our script and test that all functions work:
 
-```python
-from temp_converter import *  
-
-# Testing that all functions from another file works
-print("Water freezing point in Fahrenheit:", celsius_to_fahr(0))
-print('Absolute zero in Celsius:', kelvin_to_celsius(temp_k=0))
-print('Absolute zero in Fahrenheit:', kelvin_to_fahrenheit(temp_k=0))
-```
+    ```python
+    from temp_converter import *  
+    
+    # Testing that all functions from another file works
+    print("Water freezing point in Fahrenheit:", celsius_to_fahr(0))
+    print('Absolute zero in Celsius:', kelvin_to_celsius(temp_k=0))
+    print('Absolute zero in Fahrenheit:', kelvin_to_fahrenheit(temp_k=0))
+    ```
 
 ### 4.3. Temperature calculator
 
@@ -221,7 +223,7 @@ Let's use it:
     >>> temp_in_kelvin = 30
     >>> temperature_c = temp_calculator(temp=temp_in_kelvin, convert_to="C")
     >>> print("Temperature", temp_in_kelvin, "in Kelvin is", temperature_c, "in Celsius")
-    Temperature 30 in Kelvin is XX in Celsius.
+    Temperature 30 in Kelvin is -243.14999999999998 in Celsius.
     ```
 
 
