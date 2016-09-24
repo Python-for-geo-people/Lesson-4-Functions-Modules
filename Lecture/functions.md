@@ -118,12 +118,12 @@ Now as we have saved our temperature conversion functions into a script file we 
 <ol start="3"><li>Let's now import our <code>celsius_to_fahr</code> -function from the other script by adding a specific <code>import</code> statement at the top of our _temp_calculator.py_ -script.
 Let's also use the function so that we can see that it is working [3]:</li></ol>
 
-        ```python
-        from temp_converter import celsius_to_fahr
-        
-        # Testing that the function from another file works
-        print("Water freezing point in Fahrenheit:", celsius_to_fahr(0))
-        ```
+    ```
+    from temp_converter import celsius_to_fahr
+    
+    # Testing that the function from another file works
+    print("Water freezing point in Fahrenheit:", celsius_to_fahr(0))
+    ```
 
 <ol start="4"> <li>Run the code by pressing F5 button or by pressing the <img style="float: right;" src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/run_button.PNG" width="20"> 
 -button in Spyder. We should now get following output:</li></ol>
@@ -132,19 +132,19 @@ Let's also use the function so that we can see that it is working [3]:</li></ol>
 
 - _It is also possible to import more functions at the same time by listing and separating them with colon:_ 
 
-    ```from my_script import func1, func2, func3```
+    ```python from my_script import func1, func2, func3```
  
 <ol start="5"><li>However, quite often it is useful to import all of its' functions at once  that can be used by using specific \* -character. 
 Let's modify the import statement in our script and test that all functions work [4]: </li></ol>
 
-        ```python
-        from temp_converter import *  
-        
-        # Testing that all functions from another file works
-        print("Water freezing point in Fahrenheit:", celsius_to_fahr(0))
-        print('Absolute zero in Celsius:', kelvin_to_celsius(temp_k=0))
-        print('Absolute zero in Fahrenheit:', kelvin_to_fahrenheit(temp_k=0))
-        ```
+    ```
+    from temp_converter import *  
+    
+    # Testing that all functions from another file works
+    print("Water freezing point in Fahrenheit:", celsius_to_fahr(0))
+    print('Absolute zero in Celsius:', kelvin_to_celsius(temp_k=0))
+    print('Absolute zero in Fahrenheit:', kelvin_to_fahrenheit(temp_k=0))
+    ```
 
 ### 4.3. Temperature calculator
 
