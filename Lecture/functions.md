@@ -197,10 +197,14 @@ was imported from temp_converter.py file.
 
     ```python
     def temp_calculator(temp, convert_to):
-        """Function for converting Kelvin temperature to Celsius or Fahrenheit.
+        """
+        Function for converting Kelvin temperature to Celsius or Fahrenheit.
+        
         Parameters:
-        temp: Temperature in Kelvin
-        convert_to: "C" or "F" that corresponds to Celsius or Fahrenheit accordingly"""
+        -----------
+        temp: Temperature in Kelvin <numerical>
+        convert_to: Target temperature that can be either Celsius ('C') or Fahrenheit ('F'). Possible values: 'C' | 'F'
+        """
         
         # Check if user wants the temperature as Celsius
         if convert_to == "C":
