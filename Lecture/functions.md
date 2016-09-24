@@ -6,9 +6,10 @@
  2. [Anatomy of a function](#2)
  3. [Calling functions](#3)
  4. [Importing functions from a script](#4)
-   4.1 Saving functions into a Python script
-   4.2 Calling functions from a script
-   4.3 Temperature calculator
+ 
+    4.1. Saving functions into a Python script
+    4.2. Calling functions from a script
+    4.3. Temperature calculator
 
 ##<a name="1">1. What is a function?
 
@@ -97,12 +98,12 @@ Functions such as the ones we just created can also be called from another scrip
  
 Before we can import our functions we need to create a new script file and save the functions that we just created into a Python file called _temp_converter.py_ \[[0](#Footnotes)\].   
 
-We could write the functions again into the script file but we can also take advantage of the **_History log_** -tab where we should find all commands that we wrote 
+We could write the functions again into our script file but we can also take advantage of the **_History log_** -tab where we should find all commands that we wrote 
 to IPython console \[[1](#Footnotes)\]:
  
 <img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/history_log.PNG" width="300">
 
-Copy and paste the functions from the History log -tab and save them into the _temp_converter.py_ -script. 
+Copy and paste (only) the functions that we wrote earlier from the History log -tab and save them into the _temp_converter.py_ -script. 
 It should look like following:
 
 <img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/temp_converter.PNG" width="400">
@@ -131,7 +132,8 @@ It is also possible to import more functions at the same time by listing and sep
 
 ```from my_script import func1, func2, func3```
  
-However, quite often it is useful to import all of its' functions at once \[[4]\] that can be used by using specific \* -character. Let's modify the import statement in our script and test that all functions work:
+However, quite often it is useful to import all of its' functions at once \[[4](#Footnotes)\] that can be used by using specific \* -character. 
+Let's modify the import statement in our script and test that all functions work:
 
 ```python
 from temp_converter import *  
@@ -147,27 +149,18 @@ print('Absolute zero in Fahrenheit:', kelvin_to_fahrenheit(temp_k=0))
 So far our functions has had only one parameter but it is also possible to define a function with multiple parameters. 
 Let's now make a simple `temp_calculator` -function that converts and returns Kelvin temperature to either Celsius or Fahrenheit. Function will have two parameters:
  
- 1. **temp** = parameter for passing temperature in Kelvin
- 2. **convert\_to** = parameter that determines whether to output should be in Celsius or in Fahrenheit (using letters "C" or "F" accordingly)
+ - **temp** = parameter for passing temperature in Kelvin
+ - **convert\_to** = parameter that determines whether to output should be in Celsius or in Fahrenheit (using letters "C" or "F" accordingly)
  
-Let's start defining our function by giving it a name and setting the parameters:
+1. Let's start defining our function by giving it a name and setting the parameters:
 
 ```python
 def temp_calculator(temp, convert_to):
 ```
 
-Next we need to add a conditional statement that checks whether the result temperature is wanted in Celsius and then call corresponding function that was imported from temp_converter.py file. 
+2. Next, we need to add conditional statements that check whether the result temperature is wanted in Celsius or in Fahrenheit and then call corresponding function that
+was imported from temp_converter.py file. 
 
-```python
-def temp_calculator(temp, convert_to):
-    # Check if user wants the temperature as Celsius
-    if convert_to == "C":
-        # Convert the value to Celsius using the function that we imported from another script
-        converted_temp = kelvin_to_celsius(temp_k=temp)
-```
-
-Now our function checks if the input temperature is wanted as Celsius and converts the value accordingly. Let's continue and add the second condition for Fahrenheit:
-  
 ```python
 def temp_calculator(temp, convert_to):
     # Check if user wants the temperature as Celsius
@@ -179,7 +172,7 @@ def temp_calculator(temp, convert_to):
         converted_temp = kelvin_to_fahrenheit(temp_k=temp)
 ```
 
-Next, we need to add a **return statement** so that our function sends back the value that we are interested in:
+3. Next, we need to add a **return statement** so that our function sends back the value that we are interested in:
  
 ```python
 def temp_calculator(temp, convert_to):
@@ -194,7 +187,7 @@ def temp_calculator(temp, convert_to):
     return converted_temp
 ```
 
-Lastly, as we want to be good programmers, we add a short message at the beginning of our function that tells what the function does and how the parameters work:
+4. Lastly, as we want to be good programmers, we add a short message at the beginning of our function that tells what the function does and how the parameters work:
 
  ```python
 def temp_calculator(temp, convert_to):
@@ -214,7 +207,7 @@ def temp_calculator(temp, convert_to):
     return converted_temp
 ```
 
-That's it! Now we have a simple temperature calculator that has a simple control for the user where s/he can change the output by using the `convert_to` -parameter. Now as we added the short 
+5. That's it! Now we have a simple temperature calculator that has a simple control for the user where s/he can change the output by using the `convert_to` -parameter. Now as we added the short 
 description in the beginning of the function we can use the `help()` function in Python to find out how our function should be used. Run the script and try following:
   
  ```python
