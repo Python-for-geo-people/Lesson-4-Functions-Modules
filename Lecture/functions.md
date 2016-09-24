@@ -113,10 +113,10 @@ It should look like following:
 Now as we have saved our temperature conversion functions into a script file we can start using them. 
 
 <ol start="2"><li>Let's create another script file called _temp_calculator.py_. 
-<strong>IMPORTANT</strong>: Save the file into the SAME FOLDER where you saved the _temp_converter.py_ -file. </li></ol>\[[2](#Footnotes)\]
+<strong>IMPORTANT</strong>: Save the file into the SAME FOLDER where you saved the _temp_converter.py_ -file [2]. </li></ol>
 
 <ol start="3"><li>Let's now import our `celsius_to_fahr` -function from the other script by adding a specific `import` statement at the top of our _temp_calculator.py_ -script.
-Let's also use the function so that we can see that it is working:</li></ol>\[[3](#Footnotes)\]
+Let's also use the function so that we can see that it is working [3]:</li></ol>
 
     ```python
     from temp_converter import celsius_to_fahr
@@ -135,7 +135,7 @@ Let's also use the function so that we can see that it is working:</li></ol>\[[3
     ```from my_script import func1, func2, func3```
  
 <ol start="5"><li>However, quite often it is useful to import all of its' functions at once  that can be used by using specific \* -character. 
-Let's modify the import statement in our script and test that all functions work: </li></ol>\[[4](#Footnotes)\]
+Let's modify the import statement in our script and test that all functions work [4]: </li></ol>
 
     ```python
     from temp_converter import *  
