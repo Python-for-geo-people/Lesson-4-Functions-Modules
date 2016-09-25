@@ -8,25 +8,24 @@ This lesson is partly based on the [Software Carpentry group's](http://software-
  1. [What is a function?](#1)
  2. [Anatomy of a function](#2)
  3. [Calling functions](#3)
- 4. ["Pro" -tips (optional extra material)](#4)
-    1. [Saving functions into a Python script](#4.1)
+ 4. ["Pro" tips (optional extra material)](#4)
+    1. [Saving functions in a Python script](#4.1)
     2. [Calling functions from a script](#4.2)
     3. [Temperature calculator](#4.3)
 
 ##<a name="1">1. What is a function?
 
-Function is a block of organized, reusable code that can make your code more effective, clearer to read and easier to handle. 
+A function is a block of organized, reusable code that can make your code more effective, clearer to read and easier to handle. 
 You can think functions as little self-contained programs that can perform a specific task which you can use repeatedly in your code. 
-One of the basic principles in good programming is "not to repeat yourself", i.e. you shouldn't have
-duplicate lines of code in your script. Functions are a way to avoid such situations and they can save you a lot of time and effort as you don't need to
-retell the computer what to do every time it does a common task, such as converting temperatures from Fahrenheits to Celsius. 
+One of the basic principles in good programming is "not to repeat yourself", i.e. you shouldn't have duplicate lines of code in your script.
+Functions are a way to avoid such situations and they can save you a lot of time and effort as you don't need to retell the computer what to do every time it does a common task, such as converting temperatures from Fahrenheit to Celsius.
 During the course we have already used some functions such as `print()` command which is actually a built-in function in Python.
 
 ##<a name="2"> 2. Anatomy of a function
 
-Let's consider the task from the first week when we converted temperatures from Fahrenheits to Celsius. Such an operation is a fairly common task 
-when dealing with temperatures. Thus we might need to repeat such calculations quite frequently when analysing or comparing e.g. weather or 
-climate changes between US and Europe.
+Let's consider the task from the first week when we converted temperatures from Fahrenheit to Celsius.
+Such an operation is a fairly common task when dealing with temperature data.
+Thus we might need to repeat such calculations quite frequently when analysing or comparing e.g. weather or climate data between the US and Europe.
 
 1. Let's define our first function called `celsius_to_fahr`:
 
@@ -37,26 +36,27 @@ climate changes between US and Europe.
   
 <img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/Function_anatomy.png" width="400">
 
-The function definition opens with the keyword def followed by the name of the function and a parenthesized list of parameter names. 
+The function definition opens with the keyword `def` followed by the name of the function and a list of parameter names in parentheses.
 The body of the function — the statements that are executed when it runs — is indented below the definition line.
 
-When we call the function, the values we pass to it are assigned to those variables so that we can use them inside the function. 
-Inside the function, we use a return statement to send a result back to whoever asked for it.
+When we call the function, the values we pass to it are assigned to the corresponding parameter variables so that we can use them inside the function (e.g., the variable `temp` in this function example).
+Inside the function, we use a return statement to define the value that should be given when the function is used.
 
 ##<a name="3"> 3. Calling functions
 
-2. Let’s try running our function. Calling our self-defined function is no different from calling any other function such as `print()`. 
+2. Let’s try running our function.
+Calling our self-defined function is no different from calling any other function such as `print()`. 
 You need to call it with its name and send your value to the required parameter(s) inside the parentheses:  
   
     ```python
     >>> freezing_point =  celsius_to_fahr(0)
-    >>> print('Freezing point of water in Fahrenheits:', freezing_point)
-    Freezing point of water in Fahrenheits: 32.0
-    >>> print('Boiling point of water in Fahrenheits:', celsius_to_fahr(100))
-    Boiling point of water in Fahrenheits: 212.0
+    >>> print('Freezing point of water in Fahrenheit:', freezing_point)
+    Freezing point of water in Fahrenheit: 32.0
+    >>> print('Boiling point of water in Fahrenheit:', celsius_to_fahr(100))
+    Boiling point of water in Fahrenheit: 212.0
     ```
 
-3. Now as we know how to create a function to convert Celsius to Fahrenheits, let's create another function called `kelvin_to_celsius`:
+3. Now that we know how to create a function to convert Celsius to Fahrenheit, let's create another function called `kelvin_to_celsius`:
   
     ```python
     >>> def kelvin_to_celsius(temp_k):
@@ -71,8 +71,9 @@ You need to call it with its name and send your value to the required parameter(
     Absolute zero in Celsius: -273.15
     ```
 
-5. What about converting Kelvin to Fahrenheits? We could write out an own formula for it, but we don’t need to. Instead, we can compose it by using the two functions we have already created and 
-calling those from the function we are now creating: 
+5. What about converting Kelvins to Fahrenheit?
+We could write out an own formula for it, but we don’t need to.
+Instead, we can compose it by using the two functions we have already created and calling those from the function we are now creating: 
     
     ```python
     >>> def kelvin_to_fahrenheit(temp_k):
@@ -94,26 +95,27 @@ calling those from the function we are now creating:
 
 ## Next steps
 
-Next, if you are interested you can go through the [extra materials below](#4) that teaches you how to write and import functions from a dedicated Python -file that can be quite handy when
-you start to have many customized functions for different tasks. Otherwise, [continue with the lecture materials.](../README.md)
+Next, if you are interested you can go through the [extra materials below](#4) that teach you how to write and import functions from a dedicated Python file.
+This can be quite handy when you start to have many customized functions for different tasks.
+Otherwise, you can [continue with the lecture materials.](../README.md)
 
-# <a name="4"> "Pro" -tips (extra material)
+# <a name="4"> "Pro" tips (extra material)
 
 ## 4. Importing functions from a script
 
-Functions such as the ones we just created can also be called from another script. Quite often it is useful to create a dedicated function library to such functions that you use frequently e.g. 
-when doing data analysis. Basically this is done by collecting useful functions to a single .py file from where you can then import and use them whenever needed.    
+Functions such as the ones we just created can also be called from another script.
+Quite often it is useful to create a dedicated function library to such functions that you use frequently e.g. when doing data analysis.
+Basically this is done by collecting useful functions to a single `.py` file from where you can then import and use them whenever needed.
 
 ###<a name="4.1"> 4.1. Saving functions into a script file
  
 Before we can import our functions we need to create a new script file and save the functions that we just created into a Python file called _temp_converter.py_ \[[0](#Footnotes)\].   
 
-We could write the functions again into our script file but we can also take advantage of the **_History log_** -tab where we should find all commands that we wrote 
-to IPython console \[[1](#Footnotes)\]:
+We could write the functions again into our script file but we can also take advantage of the **History log** tab where we should find all commands that we wrote in the IPython console \[[1](#Footnotes)\]:
  
 <img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/history_log.PNG" width="300">
 
-1. Copy and paste (only) the functions that we wrote earlier from the History log -tab and save them into the _temp_converter.py_ -script ( _optionally just write them again into the file_ ). 
+1. Copy and paste (only) the functions that we wrote earlier from the History log tab and save them into the _temp_converter.py_ script ( _optionally just write them again into the file_ ). 
 It should look like following:
 
 <img src="https://github.com/Python-for-geo-people/Functions-and-libraries/blob/master/img/temp_converter.PNG" width="400">
