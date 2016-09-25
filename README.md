@@ -1,8 +1,8 @@
-# Functions and libraries
-Lesson 4: Using Spyder, functions and libraries
+# Functions and modules
+Lesson 4: Using Spyder, functions and modules
 
 For the fourth lesson we will learn how to create and use functions, one of the most useful concepts in programming.
-We will also introduce you to the concept of library (often referred as a module in Python), which you can think of as a toolbox for a specific purpose.
+We will also introduce you to the concept of library (referred often as a module in Python), which you can think of as a toolbox for a specific purpose.
 Each library contains specific functionalities (i.e., functions) that you can use for different tasks.
 Thus functions and libraries are closely related concepts.
 
@@ -10,8 +10,8 @@ Thus functions and libraries are closely related concepts.
 
 1. [Using the Spyder IDE](Lesson/spyder.md)
 2. [Basic concepts of functions](Lesson/functions.md)
-3. [Loading and using libraries](Lesson/libraries.md)
-4. [Exercise 4: Functions and libraries](https://classroom.github.com/assignment-invitations/b1ad919e5a8248a11839fec83e45093e)
+3. [Loading and using modules](Lesson/modules.md)
+4. [Exercise 4: Functions and modules](https://classroom.github.com/assignment-invitations/b1ad919e5a8248a11839fec83e45093e)
 
 ## Resources
 - Past lesson materials
