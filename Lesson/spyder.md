@@ -45,7 +45,26 @@ Hovering over the triangle (or octagon) with your mouse will provide some additi
 3. Within **Spyder** you can easily run you Python scripts by either clicking on the green play icon in the set of icons at the top of the window, or by going to **Run** -> **Run** in the menu bar.
 
 ### The explorer pane
+The explorer pane in **Spyder** serves three purposes
+
+1. *Providing documentation on demand for objects used in your Python scripts or in the IPython console*.
+The **Object inspector** tab can be used to load documentation of various functions or other objects used either in a script in the editor pane or the IPython console at the bottom right.
+Use is simple, just click on the name of a function in either location and press **Ctrl-i** to load the documentation.
+If you have it loaded you can try this with the `bin()` function on line 30 of the [`Spyder-demo-script.py`](../src/Spyder-demo-script.py) file, for example.
+2. *Listing information about variables in memory*.
+If you have defined any variables in the IPython console or have run a script in the editor pane, you can find information about defined variables in memory listed in the **Variable explorer** tab.
+If you run the [`Spyder-demo-script.py`](../src/Spyder-demo-script.py) script, for example, you will see that the initial value of variable `BigNumber` is modified within the script, but kept in the definition of the list `OddList`.
+3. *Allowing you to browse the filesystem within **Spyder***.
+Lastly, you can browse files on your computer using the **File explorer** tab.
+In future lessons and exercises you may find this helpful for locating data files, for example.
 
 ### The console pane
+The console pane is mainly useful because it provides an IPython console for your use.
+It is a normal IPython console, but note that similar to the editor pane, popup windows will appear when typing in functions to display brief documentation snippets.
+
+The other item that can be displayed in the console pane is your history of commands entered in the IPython console.
+This is obviously quite helpful if you're testing things in the IPython console before copying them to a script in the editor pane.
+You can view the history pane by going to **View** -> **Panes** -> **History log** in the menu bar.
 
 ## Some Spyder tips and tricks
+We have kept this section empty for now, but will add tips and tricks as the course progresses.
