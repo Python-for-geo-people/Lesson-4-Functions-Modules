@@ -8,9 +8,9 @@ Thus functions and libraries are closely related concepts.
 
 ## Lesson overview
 
-1. [Using the Spyder IDE](Lecture/spyder.md)
-2. [Basic concepts of functions](Lecture/functions.md)
-3. [Loading and using libraries](Lecture/libraries.md)
+1. [Using the Spyder IDE](Lesson/spyder.md)
+2. [Basic concepts of functions](Lesson/functions.md)
+3. [Loading and using libraries](Lesson/libraries.md)
 
 ## Resources
 - Past lesson materials
