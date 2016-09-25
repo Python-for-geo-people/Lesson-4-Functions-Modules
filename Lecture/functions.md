@@ -8,6 +8,7 @@
  4. ["Pro" -tips (optional extra material)](#4)
     1. [Saving functions into a Python script](#4.1)
     2. [Calling functions from a script](#4.2)
+    3. [Temperature calculator](#4.3)
 
 ##<a name="1">1. What is a function?
 
