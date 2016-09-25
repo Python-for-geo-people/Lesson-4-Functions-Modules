@@ -1,5 +1,8 @@
 # Functions
 
+## Sources
+This lesson is partly based on the [Software Carpentry group's](http://software-carpentry.org/) lessons on [Programming with Python](http://swcarpentry.github.io/python-novice-inflammation/).
+
 **Contents**:
 
  1. [What is a function?](#1)
