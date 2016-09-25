@@ -49,6 +49,17 @@ This is sometimes useful when using large modules that have much more available 
     ```
 Though this can be useful, it has the drawback that the imported function could conflict with other built-in or imported function names, and you lose the information about which module contains the function.
 You should really only do this when you truly need to.
+4. Some modules have sub-modules that can also be imported without importing the entire module.
+We will see examples of this later when making data plots using the pyplot sub-module of the [Matplotlib module](http://matplotlib.org/).
+In case you're curious, here is an example.
+
+    ```python
+    >>> import matplotlib.pyplot as plt
+    >>> plt.figure()
+    <matplotlib.figure.Figure at 0x10bfac4e0>
+    ```
+This creates a new figure window for a pyplot figure.
+Again, we'll see how this works and what it means later in the course.
 
 ## How can modules be used?
 As we see above, the easiest way to use a module is to import it and then use its functions by typing *modulename.functionname()* and providing the necessary arguments.
@@ -83,3 +94,9 @@ Here are a few things to avoid.
 This may be easier to understand by way of an example, but assuming `X` above is a Python module, `from X import *` will import all of the functions in module `X`.
 Though you might think this is helpful, it is much better to simply `import X` or `import X as Y` to keep the connection between the functions and their module.
 It is also much more likely you will encounter conflicting names when using `from X import *`.
+2. **Don't use confusing names when renaming on import**.
+Be smart when you import modules.
+If you want to make the module name shorter on import, pick a reasonable abbreviation.
+For instance, `import matplotlib as m` could be confusing, especially if you're also using `import math as m` in other script files.
+Similarly, `import matplotlib as math` is perfectly OK syntax in Python, but bound to cause a world of trouble.
+Remember, people need to be able to read and understand the code you write, keep it simple and logical.
