@@ -5,10 +5,9 @@
  1. [What is a function?](#1)
  2. [Anatomy of a function](#2)
  3. [Calling functions](#3)
- 4. [Importing functions from a script](#4)
+ 4. ["Pro" -tips (optional extra material)](#4)
     1. [Saving functions into a Python script](#4.1)
     2. [Calling functions from a script](#4.2)
-    3. [Temperature calculator](#4.3)
 
 ##<a name="1">1. What is a function?
 
@@ -89,9 +88,17 @@ calling those from the function we are now creating:
     Absolute zero in Fahrenheit: -459.66999999999996
     ```
 
-##<a name="4">4. Importing functions from a script
+## Next steps
 
-Functions such as the ones we just created can also be called from another script.
+Next, if you are interested you can go through the [extra materials below](#4) that teaches you how to write and import functions from a dedicated Python -file that can be quite handy when
+you start to have many customized functions for different tasks. Otherwise, [continue with the lecture materials.](../README.md)
+
+# <a name="4"> "Pro" -tips (extra material)
+
+## 4. Importing functions from a script
+
+Functions such as the ones we just created can also be called from another script. Quite often it is useful to create a dedicated function library to such functions that you use frequently e.g. 
+when doing data analysis. Basically this is done by collecting useful functions to a single .py file from where you can then import and use them whenever needed.    
 
 ###<a name="4.1"> 4.1. Saving functions into a script file
  
@@ -231,8 +238,6 @@ Let's use it:
   >>> print("Temperature", temp_in_kelvin, "in Kelvin is", temperature_c, "in Celsius")
   Temperature 30 in Kelvin is -243.14999999999998 in Celsius.
   ```
-
-Next, [continue with the lecture materials.](../README.md)
 
 ## Footnotes
 
