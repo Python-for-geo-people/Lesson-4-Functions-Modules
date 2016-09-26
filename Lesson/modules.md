@@ -87,7 +87,7 @@ sin(...)
 ```
 Note that you'll need to press **q** to exit the help viewer.
 
-## What should I *not* do?
+## <a name='not-to-do'></a>What should I *not* do?
 Here are a few things to avoid.
 
 1. **Don't use `from X import *`**.
