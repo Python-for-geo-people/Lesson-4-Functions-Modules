@@ -251,6 +251,6 @@ Let's use it:
 - \[1\] History log -tab can be found from the same panel where we have executed our codes (bottom right next to IPython console).
 - \[2\] When communicating between script files, it is necessary to keep them in the same folder so that Python can find them (there are also other ways but this is the easiest).
 - \[3\] Following the principles of good programming all `import` -statements that you use should always be written at the top of the script file.  
-- \[4\] It is also possible to import functions by using specific \* -character:`from module_X import *`. Downside of importing using \* symbol for importing all functions is that you won't see what functions are imported, 
+- \[4\] It is also possible to import functions by using specific \* -character:`from module_X import *`. Downside of using \* symbol to import all functions is that you won't see what functions are imported, 
 unless checking them from the script itself or use `dir()` -function to list them (see [modules.md](modules.md#using-modules)). <strong>Warning:</strong> there is a risk of conflict when doing this, use with care (see more from <a href="https://github.com/Python-for-geo-people/Functions-and-modules/blob/master/Lesson/modules.md#not-to-do">modules.md</a>)
 
