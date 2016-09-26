@@ -149,17 +149,16 @@ Let's also use the function so that we can see that it is working [3]:</li></ol>
   from my_script import func1, func2, func3
   ```
  
-<ol start="5"><li>However, sometimes it is useful to import all of its' functions at once that can be used by using specific * -character. <strong>Warning:</strong> there is a risk of conflict when doing this, 
-use with care (see more from <a href="https://github.com/Python-for-geo-people/Functions-and-modules/blob/master/Lesson/modules.md#not-to-do">modules.md</a>).  
+<ol start="5"><li>Sometimes it is useful to import the whole script and its' functions at once.  
 Let's modify the import statement in our script and test that all functions work [4]: </li></ol>
 
   ```python
-  from temp_converter import *  
+  import temp_converter as tc  
 
   # Testing that all functions from another file works
-  print("Water freezing point in Fahrenheit:", celsius_to_fahr(0))
-  print('Absolute zero in Celsius:', kelvin_to_celsius(temp_k=0))
-  print('Absolute zero in Fahrenheit:', kelvin_to_fahrenheit(temp_k=0))
+  print("Water freezing point in Fahrenheit:", tc.celsius_to_fahr(0))
+  print('Absolute zero in Celsius:', tc.kelvin_to_celsius(temp_k=0))
+  print('Absolute zero in Fahrenheit:', tc.kelvin_to_fahrenheit(temp_k=0))
   ```
 
 ###<a name="4.3"> 4.3. Temperature calculator
@@ -252,4 +251,6 @@ Let's use it:
 - \[1\] History log -tab can be found from the same panel where we have executed our codes (bottom right next to IPython console).
 - \[2\] When communicating between script files, it is necessary to keep them in the same folder so that Python can find them (there are also other ways but this is the easiest).
 - \[3\] Following the principles of good programming all `import` -statements that you use should always be written at the top of the script file.  
-- \[4\] Downside of importing using \* symbol for importing all functions is that you won't see what functions are imported, unless checking them from the script itself or use `dir()` -function to list them (see [modules.md](modules.md#using-modules)).
+- \[4\] It is also possible to import functions by using specific \* -character:`from module_X import *`. Downside of importing using \* symbol for importing all functions is that you won't see what functions are imported, 
+unless checking them from the script itself or use `dir()` -function to list them (see [modules.md](modules.md#using-modules)). <strong>Warning:</strong> there is a risk of conflict when doing this, use with care (see more from <a href="https://github.com/Python-for-geo-people/Functions-and-modules/blob/master/Lesson/modules.md#not-to-do">modules.md</a>)
+
