@@ -149,7 +149,7 @@ Let's also use the function so that we can see that it is working [3]:</li></ol>
   from my_script import func1, func2, func3
   ```
  
-<ol start="5"><li>However, sometimes it is useful to import all of its' functions at once that can be used by using specific * -character. **Warning:** there is a risk of conflict when doing this, 
+<ol start="5"><li>However, sometimes it is useful to import all of its' functions at once that can be used by using specific * -character. <strong>Warning:</strong> there is a risk of conflict when doing this, 
 use with care (see more from <a href="https://github.com/Python-for-geo-people/Functions-and-modules/blob/master/Lesson/modules.md#not-to-do">modules.md</a>).  
 Let's modify the import statement in our script and test that all functions work [4]: </li></ol>
 
