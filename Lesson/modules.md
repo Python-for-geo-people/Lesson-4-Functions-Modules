@@ -61,7 +61,7 @@ In case you're curious, here is an example.
 This creates a new figure window for a pyplot figure.
 Again, we'll see how this works and what it means later in the course.
 
-## How can modules be used?
+## <a name='using-modules'></a>How can modules be used?
 As we see above, the easiest way to use a module is to import it and then use its functions by typing *modulename.functionname()* and providing the necessary arguments.
 Yes, it is that simple.
 

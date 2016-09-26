@@ -42,7 +42,7 @@ There are several features that make the **Spyder** editor pane more useful than
 For example, when you type in the print statement, a window will pop up after you have typed `print(`, showing you how to use the function.
 2. If you have a syntax error on a line of your program, a small yellow triangle or red octagon will be displayed to the left of that line.
 Hovering over the triangle (or octagon) with your mouse will provide some additional information about the possible cause of the error.
-3. Within **Spyder** you can easily run you Python scripts by either clicking on the green play icon in the set of icons at the top of the window, or by going to **Run** -> **Run** in the menu bar.
+3. Within **Spyder** you can easily run your Python scripts by either clicking on the green play icon in the set of icons at the top of the window, or by going to **Run** -> **Run** in the menu bar.
 
 ### The explorer pane
 The explorer pane in **Spyder** serves three purposes
