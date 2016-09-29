@@ -12,6 +12,10 @@ Thus functions and libraries are closely related concepts.
   - [An overview of the Spyder IDE](Lesson/spyder.md#an-overview-of-the-spyder-ide)
   - [Some Spyder tips and tricks](Lesson/spyder.md#some-spyder-tips-and-tricks)
 2. [Basic concepts of functions](Lesson/functions.md)
+  - [What is a function?](Lesson/functions.md#1)
+  - [Anatomy of a function](Lesson/functions.md#2)
+  - [Calling functions](Lesson/functions.md#3)
+  - ["Pro" tips](Lesson/functions.md#4)
 3. [Loading and using modules](Lesson/modules.md)
 4. [Exercise 4: A temperature calculator](https://classroom.github.com/assignment-invitations/b1ad919e5a8248a11839fec83e45093e)
 
