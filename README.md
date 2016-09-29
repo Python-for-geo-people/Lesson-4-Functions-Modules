@@ -17,7 +17,7 @@ Thus functions and libraries are closely related concepts.
 
 ## Resources
 - Past lesson materials
-  - [Control flow](https://github.com/Python-for-geo-people/Lesson 3)
+  - [Control flow](https://github.com/Python-for-geo-people/Lesson-3)
   - [Intro to version control and GitHub](https://github.com/Python-for-geo-people/Lesson-2/tree/master/Lesson/intro-to-GitHub.md)
   - [Writing script files](https://github.com/Python-for-geo-people/Lesson-2/tree/master/Lesson/writing-scripts.md)
   - [Working on the exercises](https://github.com/Python-for-geo-people/Lesson-2/tree/master/Lesson/working-on-assignment.md)
