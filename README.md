@@ -1,4 +1,4 @@
-# Functions and modules
+# Lesson 4: Functions and modules
 
 For the fourth lesson we will learn how to create and use functions, one of the most useful concepts in programming.
 We will also introduce you to the concept of library (referred often as a module in Python), which you can think of as a toolbox for a specific purpose.
