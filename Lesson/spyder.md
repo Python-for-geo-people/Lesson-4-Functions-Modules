@@ -68,3 +68,7 @@ You can view the history pane by going to **View** -> **Panes** -> **History log
 
 ## Some Spyder tips and tricks
 We have kept this section empty for now, but will add tips and tricks as the course progresses.
+
+## 
+**Next**: [Basic concepts of functions](functions.md)<br/>
+**Home**: [Lesson 4 main page](https://github.com/Python-for-geo-people/Lesson-4-Functions-Modules)<br/>
