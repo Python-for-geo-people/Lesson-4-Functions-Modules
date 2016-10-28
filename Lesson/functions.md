@@ -254,3 +254,8 @@ Let's use it:
 - \[4\] It is also possible to import functions by using specific \* -character:`from module_X import *`. Downside of using \* symbol to import all functions is that you won't see what functions are imported, 
 unless checking them from the script itself or use `dir()` -function to list them (see [modules.md](modules.md#using-modules)). <strong>Warning:</strong> there is a risk of conflict when doing this, use with care (see more from <a href="https://github.com/Python-for-geo-people/Functions-and-modules/blob/master/Lesson/modules.md#not-to-do">modules.md</a>)
 
+
+## 
+**Next**: [Loading and using modules](modules.md)<br/>
+**Home**: [Lesson 4 main page](https://github.com/Python-for-geo-people/Lesson-4-Functions-Modules)<br/>
+**Previous**: [Using the Spyder IDE](spyder.md)
