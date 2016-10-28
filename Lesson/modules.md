@@ -1,4 +1,4 @@
-# Loading and using modules Python
+# Loading and using Python modules
 
 ## Sections
 
@@ -100,3 +100,9 @@ If you want to make the module name shorter on import, pick a reasonable abbrevi
 For instance, `import matplotlib as m` could be confusing, especially if you're also using `import math as m` in other script files.
 Similarly, `import matplotlib as math` is perfectly OK syntax in Python, but bound to cause a world of trouble.
 Remember, people need to be able to read and understand the code you write, keep it simple and logical.
+
+
+## 
+**Next**: [Exercise 4: A temperature calculator](https://classroom.github.com/assignment-invitations/b1ad919e5a8248a11839fec83e45093e)<br/>
+**Home**: [Lesson 4 main page](https://github.com/Python-for-geo-people/Lesson-4-Functions-Modules)<br/>
+**Previous**: [Basic concepts of functions](functions.md)
